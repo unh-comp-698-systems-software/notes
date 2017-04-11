@@ -36,3 +36,15 @@ Then run the following to list the files that exist in the working directory of 
 ```bash
 docker run [username/docker-cloud-test] ls
 ```
+
+**3) How do I force the rebuild of a new image based on my github repo's master branch?**
+
+If for some reason merging a pull request didn't publish the correct image in Docker cloud, force a rebuild by:
+
+* Visit https://cloud.docker.com/
+* Select 'repositories' at the top
+* Select the docker-cloud-test repository
+* Select the 'Builds' tab
+* Scroll down and click the wrench icon 'Trigger Build' (The line should have Docker Tag: latest, Source: master)
+* Select the new build that shows up below in the 'Recent Builds' list
+* Ensure that the build completes successfully
