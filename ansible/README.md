@@ -8,14 +8,14 @@ of the host using Ansible (https://www.ansible.com/).
 We're also going to take the additional step of running two instances
 of your website in separate docker containers.  The first
 will be the production version which will be accessible on
-port 8080 and will be running the previous tagged version of
+port 8080 and will be running the previously tagged version of
 your website (Just the main page with UNH698 Website).  The
 second container will be running your newest tagged version of 
 your website and accessible on port 8081.
 
 ## Steps - Preface
 
-I will have dropped the previous sets of AWS servers created a new set.
+I will have dropped the previous sets of AWS servers and created a new set.
 (See your email for your new IP address and access key).
 These servers will have already been setup with ansible and git which should
 be all you need for this assignment.
@@ -25,7 +25,7 @@ be all you need for this assignment.
 Here, we'll use git as a method for tracking changes to your ansible playbook
 and deploying it onto your AWS instance.
 
-1) Copy this `ansbile` folder into your docker-cloud-test repository.
+1) Copy this `ansible` folder into your docker-cloud-test repository.
 2) Create a branch, add the ansible folder, and push the branch to your github repository.
 	```bash
 	git checkout master
@@ -98,9 +98,9 @@ ansible-playbook deploy-website-staging.yml -v
 
 Points:
 
-* Staging and production contaners are running `release-#.#.#` versions of your docker image
+* Staging and production containers are running `release-#.#.#` versions of your docker image
 * Production instance is the version with just the main page containing the text "UNH698 Website"
-* Staging instace is a version containing the main page and topic subpage.
+* Staging instance is a version containing the main page and topic subpage.
 * Production instance is available on the host's port 8080
 * Staging instance is available on the host's port 8081
 * Style point if the staging instance uses a framework such as bootstrap, or jinja2 templating.
