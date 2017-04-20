@@ -35,9 +35,15 @@ and deploying it onto your AWS instance.
 	git commit -m "add informative commit message here"
 	git push origin pick-a-branch-name
 	```
-3) Login to your new AWS server, clone your docker-cloud-test repository.
 
-fml: ...from the ansible directory from your new branch...
+3) Login to your new AWS server, clone your docker-cloud-test repository, and switch
+to the newly created branch.
+	```bash
+	cd ~
+	git clone [your docker-cloud-test repo]
+	cd [your docker-cloud-test repo]
+	git checkout pick-a-branch-name
+	```
 
 4) Run the configure-host.yml playbook (on the AWS server) as-is to verify ansible is setup.
 	```bash
