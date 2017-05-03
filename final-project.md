@@ -92,7 +92,9 @@ as with the docker-cloud-test project.
 ## Virtualization
 
 Emails will be sent to your address in Canvas with 
-server information.
+server information.  Ports 8080 and 8081 will be
+opened for production and staging server access
+respectively.
 
 
 Good Luck,
